@@ -46,7 +46,7 @@ func StartValidatorMonitor(ctx context.Context, errCh chan<- error) {
 
 func updateValidatorMetrics(ctx context.Context) error {
 	client := &http.Client{Timeout: 10 * time.Second}
-	url := "https://api.hyperliquid-testnet.xyz/info"
+	url := "https://api.hyperliquid.xyz/info"
 	payload := []byte(`{"type": "validatorSummaries"}`)
 
 	logger.Debug("Making request to validator API")
